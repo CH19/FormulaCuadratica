@@ -1,0 +1,8 @@
+<div>
+  <div *ngFor="let label of labels; let i = index">
+    <label [for]="union(label, i)">{{union(label, i)}}</label>
+    <input type="number" [id]="union(label, i)" [(ngModel)]="numbers[i]">
+  </div>
+  <button (click)="button()">Calcular</button>
+  <h1 *ngIf="operacion">{{result}}</h1>
+</div>
