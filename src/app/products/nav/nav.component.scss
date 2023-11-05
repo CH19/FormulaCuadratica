@@ -1,10 +1,13 @@
 @use '../../variables';
 
 .web-view{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: variables.$White;
   display: flex;
   width: 100vw;
   justify-content: space-between;
-  padding-top: 2rem;
   .user-data{
     display: grid;
     place-content: center;
@@ -14,6 +17,16 @@
   .options{
     display: flex;
     flex-direction: row;
+  }
+  .counter{
+    font-size: 1rem;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    border-radius: 100%;
+    padding: 1px;
+    background-color: variables.$Hospital-green;
+    color: variables.$White;
   }
 }
 .mobile-view{

@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-formu',
@@ -12,7 +12,7 @@ export class FormuComponent implements OnInit, OnChanges {
   labels = Array(3).fill('X');
   numbers: number[] = Array(3).fill(0);
   operacion = false;
-  result: any = 0;
+  result: number | string = 0;
   ngOnInit(): void {
       console.log('Cargando antes de la creacion del componente');
   }

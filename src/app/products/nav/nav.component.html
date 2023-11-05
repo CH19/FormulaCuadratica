@@ -8,6 +8,7 @@
       <p>{{user.email}}</p>
       <button mat-icon-button>
         <mat-icon>shopping_cart</mat-icon>
+        <span *ngIf="counter > 0" class="counter">{{counter}}</span>
       </button>
     </div>
   </div>

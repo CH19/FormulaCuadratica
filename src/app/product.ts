@@ -1,4 +1,3 @@
-import { EmailValidator } from "@angular/forms";
 
 // interfaces/producto.interface.ts
 

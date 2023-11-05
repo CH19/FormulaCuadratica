@@ -1,5 +1,4 @@
-import { Component, OnInit, OnChanges, OnDestroy, SimpleChange } from '@angular/core';
-import { count } from 'rxjs';
+import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
