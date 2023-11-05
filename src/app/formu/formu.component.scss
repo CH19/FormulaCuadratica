@@ -1,0 +1,25 @@
+.input-thing{
+width: 100vw;
+  height: fit-content;
+  display: grid;
+  place-content: center;
+}
+.input-container{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(60px, 1fr));
+  max-width: 500px;
+  gap: 5px;
+  input{
+    max-width: 100px;
+    &::placeholder{
+      --color: red;
+    }
+  }
+  button{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 4;
+    cursor: pointer;
+
+  }
+}

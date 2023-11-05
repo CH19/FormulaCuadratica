@@ -1,8 +1,17 @@
-<div>
-  <div *ngFor="let label of labels; let i = index">
-    <label [for]="union(label, i)">{{union(label, i)}}</label>
-    <input type="number" [id]="union(label, i)" [(ngModel)]="numbers[i]">
+<div class="input-thing">
+  <div class="input-container">
+    <mat-form-field *ngFor="let label of labels; let i = index">
+      <mat-label>X{{i}}</mat-label>
+      <input type="number" matInput  [placeholder]="'Write X' + i "  [(ngModel)]="numbers[i]">
+      <mat-error>
+        Please enter a valid Number
+      </mat-error>
+      <mat-error>
+        A number is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="button()">Calcular</button>
+    <h1 *ngIf="operacion">{{result}}</h1>
   </div>
-  <button (click)="button()">Calcular</button>
-  <h1 *ngIf="operacion">{{result}}</h1>
+
 </div>
