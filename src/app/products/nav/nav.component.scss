@@ -1,0 +1,59 @@
+@import '../../variables';
+
+.web-view{
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  padding-top: 2rem;
+  .user-data{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+  .options{
+    display: flex;
+    flex-direction: row;
+  }
+  ul{
+    display:flex;
+    list-style: none ;
+    width: fit-content;
+    gap: 7px;
+    li{
+      a{
+        text-decoration: none;
+        color: $Very-light-pink;
+        padding: 4px;
+        border: solid 1px transparent;
+        border-radius: 2px;
+        &:hover{
+          color: $Hospital-green;
+          border: 1px solid $Hospital-green;
+        }
+      }
+    }
+  }
+}
+.mobile-view{
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .web-view{
+    display: none;
+  }
+  .mobile-view{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    .side-menu{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $White;
+
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<header>
+  <div class="web-view">
+    <div class="options">
+      <app-yard-sale-logo />
+      <ul>
+        <li><a href="">All</a></li>
+        <li><a href="">Clothes</a></li>
+        <li><a href="">Electronics</a></li>
+        <li><a href="">Furtunire</a></li>
+        <li><a href="">Toys</a></li>
+        <li><a href="">Other</a></li>
+      </ul>
+
+    </div>
+    <div class="user-data">
+      <p>{{user.email}}</p>
+      <button mat-icon-button>
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-view">
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <app-yard-sale-logo />
+    <button mat-icon-button>
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+    <div class="side-menu">
+      <mat-icon>close</mat-icon>
+
+      <ul>
+        <li><a href="">All</a></li>
+        <li><a href="">Clothes</a></li>
+        <li><a href="">Electronics</a></li>
+        <li><a href="">Furtunire</a></li>
+        <li><a href="">Toys</a></li>
+        <li><a href="">Other</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
