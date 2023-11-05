@@ -12,4 +12,9 @@ export class NavComponent {
     email: 'user@gmail.com',
     password :''
   }
+  showMobileMenu = false;
+  toogleMenu()
+  {
+    this.showMobileMenu = !this.showMobileMenu;
+  }
 }

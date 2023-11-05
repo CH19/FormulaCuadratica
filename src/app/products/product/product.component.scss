@@ -1,9 +1,23 @@
-@import '../../variables.scss';
+@use '../../variables';
 .ProductCard{
   max-width: 200px;
   cursor: pointer;
   border-radius: 20px;
   &:active{
-    box-shadow: 0 0 3px 3px $Dark;
+    box-shadow: 0 0 3px 3px variables.$Dark;
+  }
+  mat-card-title{
+    max-width: 150px;
+    position: relative;
+    left: -3rem;
+    // transform: translateX(-50%);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ProductCard{
+    max-width: 150px;
   }
 }

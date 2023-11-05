@@ -8,6 +8,9 @@ import {NgModel, FormsModule} from '@angular/forms';
 import { CounterComponent } from './counter/counter.component'
 import { NavComponent } from './products/nav/nav.component';
 
+// Modulo de HTTP
+import {HttpClientModule} from '@angular/common/http'
+
 // Material
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
@@ -16,7 +19,7 @@ import { ProductComponent } from './products/product/product.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { YardSaleLogoComponent } from './products/yard-sale-logo/yard-sale-logo.component';
-
+import { OptionsListComponent } from './products/nav/options-list/options-list.component';
 
 
 @NgModule({
@@ -27,7 +30,8 @@ import { YardSaleLogoComponent } from './products/yard-sale-logo/yard-sale-logo.
     CatalogoComponent,
     ProductComponent,
     NavComponent,
-    YardSaleLogoComponent
+    YardSaleLogoComponent,
+    OptionsListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import { YardSaleLogoComponent } from './products/yard-sale-logo/yard-sale-logo.
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

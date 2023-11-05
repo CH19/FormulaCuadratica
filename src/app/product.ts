@@ -5,9 +5,11 @@ import { EmailValidator } from "@angular/forms";
 type email = `${string}@${string | 'gmail'}.${'com' | 'net'}`
 export interface Producto {
     id: number;
-    name: string;
-    precio: number;
+    title: string;
+    price: number;
     image: string;
+    description?: string;
+    category?: string;
 }
 export interface User{
   name?: string;

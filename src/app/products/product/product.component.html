@@ -1,16 +1,17 @@
 <mat-card class="ProductCard">
   <mat-card-header>
     <div mat-card-avatar class="Card-header-image"></div>
-    <mat-card-title>{{P.name}}</mat-card-title>
-    <mat-card-subtitle>{{P.precio}}</mat-card-subtitle>
+    <mat-card-title>{{P.title}}</mat-card-title>
+    <mat-card-subtitle>{{P.price}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="P.image" [alt]="P.name">
+  <img mat-card-image [src]="P.image" [alt]="P.title">
   <mat-card-content>
     <p>
-      {{P.precio}}
+      {{P.price}}
     </p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary">Buy</button>
+    <button mat-icon-button (click)="onAddCart()"><mat-icon>add_shopping_cart</mat-icon></button>
   </mat-card-actions>
 </mat-card>

@@ -2,15 +2,7 @@
   <div class="web-view">
     <div class="options">
       <app-yard-sale-logo />
-      <ul>
-        <li><a href="">All</a></li>
-        <li><a href="">Clothes</a></li>
-        <li><a href="">Electronics</a></li>
-        <li><a href="">Furtunire</a></li>
-        <li><a href="">Toys</a></li>
-        <li><a href="">Other</a></li>
-      </ul>
-
+      <app-options-list />
     </div>
     <div class="user-data">
       <p>{{user.email}}</p>
@@ -20,24 +12,20 @@
     </div>
   </div>
   <div class="mobile-view">
-    <button mat-icon-button>
+    <button (click)="toogleMenu()" mat-icon-button>
       <mat-icon>menu</mat-icon>
     </button>
     <app-yard-sale-logo />
     <button mat-icon-button>
       <mat-icon>add_shopping_cart</mat-icon>
     </button>
-    <div class="side-menu">
-      <mat-icon>close</mat-icon>
+    <div class="side-menu" [class.active]="showMobileMenu">
 
-      <ul>
-        <li><a href="">All</a></li>
-        <li><a href="">Clothes</a></li>
-        <li><a href="">Electronics</a></li>
-        <li><a href="">Furtunire</a></li>
-        <li><a href="">Toys</a></li>
-        <li><a href="">Other</a></li>
-      </ul>
+      <button mat-icon-button (click)="toogleMenu()">
+        <mat-icon >close</mat-icon>
+
+      </button>
+      <app-options-list />
     </div>
   </div>
 </header>

@@ -1,3 +1,5 @@
 <div class="ProductsContainer">
-  <app-product  *ngFor="let product of productos" [P]="product"/>
+  <app-product (addedProduct)="printSendProduct($event)"  *ngFor="let product of productos" [P]="product"/>
+
 </div>
+<h1>Total: {{total}}</h1>
